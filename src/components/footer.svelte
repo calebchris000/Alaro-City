@@ -3,9 +3,9 @@
 </script>
 
 <section
-    class="w-full bg-gray-700 h-64 flex flex-col gap-4 justify-between p-10 pb-4 text-primary"
+    class="w-full bg-gray-700 h-full lg:h-64 flex flex-col gap-4 justify-between p-10 pb-4 text-primary"
 >
-    <div class="flex justify-between">
+    <div class="flex justify-between flex-col gap-8 lg:flex-row">
         <div>
             <img class="bg-white rounded-md px-4" src={logo} alt="" />
             <h2 class="text-lg font-medium my-2">Reach me on WhatsApp</h2>

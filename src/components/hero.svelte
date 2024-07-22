@@ -10,11 +10,11 @@
 
 <section
     id="home"
-    class="bg-secondary h-max py-20 relative w-full flex flex-col justify-between pt-20 gap-10 px-32"
+    class="bg-secondary p-4 h-max py-20 relative w-full flex flex-col justify-between pt-20 gap-10 lg:px-32"
 >
-    <div class="w-[50rem] mx-auto space-y-4">
+    <div class="mx-auto space-y-4 lg:w-[50rem]">
         <h1
-            class="text-[4rem] font-semibold text-center text-primary leading-tight"
+            class="text-3xl lg:text-[4rem] font-semibold text-center text-primary leading-tight"
         >
             Alaro City: Discover Mixed-Use Community in Lekki Free Zone.
         </h1>
@@ -30,7 +30,7 @@
             on:click={() => {
                 show_video_popup = !show_video_popup;
             }}
-            class="absolute video_holder hover:scale-[1.2] hover:rotate-0 cursor-pointer transition-all left-10 top-10 -rotate-6 text-2xl w-40 space-y-2"
+            class="absolute hidden video_holder hover:scale-[1.2] hover:rotate-0 cursor-pointer transition-all left-10 top-10 -rotate-6 text-2xl w-40 space-y-2 lg:block"
         >
             <span class="w-[12rem] block bg-gray-200 relative">
                 <img class="w-full" src={video_shot} alt="" />
@@ -43,7 +43,9 @@
             </p>
         </button>
     </div>
-    <div class="w-[50rem] mx-auto h-[70vh] overflow-hidden">
+    <div
+        class="w-full lg:w-[50rem] mx-auto h-[30vh] lg:h-[70vh] overflow-hidden"
+    >
         <Swiper />
     </div>
 

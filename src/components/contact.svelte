@@ -3,7 +3,7 @@
 
 <section
     id="contact"
-    class="w-full bg-white mt-10 p-20 flex flex-col gap-10 items-center"
+    class="w-full bg-white mt-10 p-4 flex flex-col gap-10 items-center lg:p-20"
 >
     <h1 class="text-2xl font-semibold text-secondary underline">Message Us</h1>
 
@@ -55,7 +55,7 @@
 
 <style>
     .form {
-        @apply flex flex-col gap-4 w-[40vw];
+        @apply flex flex-col gap-4 lg:w-[40vw] w-full;
     }
     .form_item {
         @apply flex flex-col gap-2;

@@ -17,6 +17,8 @@
         new Swiper(".swiper", {
             direction: "horizontal",
             speed: 1000,
+            allowTouchMove: false,
+
             modules: [Autoplay],
 
             autoplay: {
