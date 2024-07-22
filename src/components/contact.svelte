@@ -5,7 +5,7 @@
     id="contact"
     class="w-full bg-white mt-10 p-20 flex flex-col gap-10 items-center"
 >
-    <h1 class="text-2xl font-medium text-secondary">Message Us</h1>
+    <h1 class="text-2xl font-semibold text-secondary underline">Message Us</h1>
 
     <form class="form" action="post">
         <div class="form_item">
