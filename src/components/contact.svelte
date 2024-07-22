@@ -1,9 +1,7 @@
 <script lang="ts">
 </script>
 
-<section
-    class="w-full bg-gray-200 mt-10 p-20 flex flex-col gap-10 items-center"
->
+<section class="w-full bg-white mt-10 p-20 flex flex-col gap-10 items-center">
     <h1 class="text-2xl font-medium">Message Us</h1>
 
     <form class="form" id="contact" action="post">

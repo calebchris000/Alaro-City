@@ -16,7 +16,7 @@
 
 <nav
     bind:this={nav}
-    class="bg-secondary sticky top-0 flex items-center h-20 px-4 gap-10 xl:px-32 xl:h-16 justify-between"
+    class="bg-secondary z-50 sticky top-0 flex items-center h-20 px-4 gap-10 xl:px-32 xl:h-16 justify-between"
 >
     <div class="w-28"><img class="w-full" src={logo} alt="" /></div>
     <div>

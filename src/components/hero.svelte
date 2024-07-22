@@ -2,10 +2,11 @@
     import video_intro from "../assets/alaro-city-intro.mp4";
     import Play from "../assets/play.svelte";
     import video_shot from "../assets/video_shot.png";
+    import Swiper from "./swiper.svelte";
 </script>
 
 <section
-    class="bg-secondary relative h-[80vh] w-full flex flex-col justify-between pt-20 gap-10 px-32"
+    class="bg-secondary h-max py-20 relative w-full flex flex-col justify-between pt-20 gap-10 px-32"
 >
     <div class="w-[50rem] mx-auto space-y-4">
         <h1
@@ -21,7 +22,7 @@
         </p>
 
         <div
-            class="absolute video_holder left-10 top-10 -rotate-6 text-2xl w-40 space-y-2"
+            class="absolute video_holder hover:scale-[1.2] hover:rotate-0 transition-all left-10 top-10 -rotate-6 text-2xl w-40 space-y-2"
         >
             <span class="w-[12rem] block bg-gray-200 relative">
                 <img class="w-full" src={video_shot} alt="" />
@@ -34,7 +35,9 @@
             </p>
         </div>
     </div>
-    <div class="w-full"></div>
+    <div class="w-[50rem] mx-auto h-[70vh] overflow-hidden">
+        <Swiper />
+    </div>
 </section>
 
 <style>
