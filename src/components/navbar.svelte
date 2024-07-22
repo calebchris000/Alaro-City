@@ -20,7 +20,7 @@
 >
     <div class="w-28"><img class="w-full" src={logo} alt="" /></div>
     <div>
-        <a class="font-medium" href="#contact">CONTACT US</a>
+        <a class="font-medium text-primary" href="#contact">Contact Us</a>
     </div>
     <div class="hidden xl:block"></div>
 </nav>

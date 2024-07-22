@@ -1,10 +1,13 @@
 <script lang="ts">
 </script>
 
-<section class="w-full bg-white mt-10 p-20 flex flex-col gap-10 items-center">
-    <h1 class="text-2xl font-medium">Message Us</h1>
+<section
+    id="contact"
+    class="w-full bg-white mt-10 p-20 flex flex-col gap-10 items-center"
+>
+    <h1 class="text-2xl font-medium text-secondary">Message Us</h1>
 
-    <form class="form" id="contact" action="post">
+    <form class="form" action="post">
         <div class="form_item">
             <label for="full_name">Full Name</label>
             <input
@@ -61,7 +64,7 @@
     .form_item input,
     .form_item select,
     .form_item textarea {
-        @apply h-10 outline-none p-4 bg-white;
+        @apply h-10 outline-none p-4 bg-white border border-gray-200 rounded-md text-sm;
     }
     .form_item select {
         @apply p-0 text-gray-400 px-4;
