@@ -1,11 +1,12 @@
 <script lang="ts">
+    import axios from "axios";
     import { Notification } from "../core/utils/notification";
     const notification = new Notification();
     let form_element: HTMLFormElement;
 
     function handleForm() {
         if (!form_element) return;
-
+        const backend_url = import.meta.env.VITE_BACKEND_URL;
         const formData = new FormData(form_element);
         const form_data = Object.fromEntries(formData) as {
             email: string;
@@ -39,7 +40,31 @@
             return;
         }
 
+        const { full_name, phone, email, interest, comment } = form_data;
+
         console.log(form_data);
+
+        axios
+            .post(`${backend_url}/sendEmail`, {
+                full_name,
+                phone,
+                email,
+                interest,
+                comment,
+            })
+            .then((response) => {
+                const { status, data } = response;
+                if (status === 200) {
+                    notification.success({ text: "Message sent!" });
+                } else {
+                    notification.error({
+                        text: "Message not sent. Reason: " + data,
+                    });
+                }
+            })
+            .catch((e) => {
+                notification.error({ text: String(e) });
+            });
     }
 </script>
 
