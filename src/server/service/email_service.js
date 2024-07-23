@@ -13,7 +13,7 @@ const sendEmail = async ({ subject, body }) => {
     subject,
     from: "Everything Business everythingbusiness2024@gmail.com",
     // to: "michaeluduzoije@gmail.com",
-    to: "calebchris000@gmail.com",
+    to: "michaeluduzoije@gmail.com",
     html: body,
   });
 
