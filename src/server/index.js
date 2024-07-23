@@ -36,7 +36,6 @@ app.post("/sendEmail", async (req, res) => {
     });
     await sendEmail({
       subject: "New Lead from Alaro City Landing Page",
-      to: email,
       body: html_body,
     });
 
