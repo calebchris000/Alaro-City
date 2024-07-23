@@ -2,12 +2,12 @@
 </script>
 
 <section
-    class="h-fit bg-white p-32 shapedividers_com-2274 pt-32 flex flex-col gap-10"
+    class="h-fit bg-white p-4 lg:p-32 shapedividers_com-2274 pt-32 flex flex-col gap-10"
 >
     <h2 class="text-2xl font-semibold text-secondary underline text-center">
         About Us
     </h2>
-    <div class="w-[50%] gap-4 text-center mx-auto space-y-4">
+    <div class="lg:w-[50%] gap-4 text-center mx-auto space-y-4">
         <p class="leading-loose content">
             Alárò City is a joint venture between Rendeavour, the largest new
             city and industrial park builder in Africa, and the Lagos State
@@ -42,7 +42,7 @@
                 location within Alárò City. (Minimum purchase is 1,000sqm) with
                 a range of options as captured below:
             </p>
-            <ol class="list-disc leading-loose">
+            <ol class="list-disc leading-loose px-4">
                 <li>
                     Serviced Commercial plots – Minimum purchase of 1,000sqm.
                 </li>

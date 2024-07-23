@@ -19,8 +19,13 @@
             notification.error({ text: "Fill out your names" });
             return;
         }
-        if (form_data.full_name.split(" ").length < 2) {
+        if (form_data.full_name.trim().split(" ").length < 2) {
             notification.error({ text: "Provide your first and last name" });
+            return;
+        }
+
+        if (!form_data.phone) {
+            notification.error({ text: "Provide your phone number" });
             return;
         }
 
