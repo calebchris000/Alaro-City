@@ -5,6 +5,7 @@ const email_content = ({
   interest,
   comment,
   user_type,
+  site_visit,
 }) => {
   return `<!doctype html>
   <html lang="en">
@@ -87,6 +88,10 @@ const email_content = ({
               <div class="info-item">
                   <span class="label">Interested In:</span>
                   <span class="value">${interest}</span>
+              </div>
+              <div class="info-item">
+                  <span class="label">When I Would Like To Go For Site Visit:</span>
+                  <span class="value">${site_visit}</span>
               </div>
 
               <div class="comment">
