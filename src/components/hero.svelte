@@ -44,7 +44,7 @@
         </button>
     </div>
     <div
-        class="w-full lg:w-[50rem] mx-auto h-[50rem] lg:h-[70vh] overflow-hidden"
+        class="w-full lg:w-[50rem] mx-auto box-border lg:h-[70vh] overflow-hidden"
     >
         <Swiper />
     </div>
