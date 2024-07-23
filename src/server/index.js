@@ -25,7 +25,7 @@ app.get("/", (req, res) => {
 
 app.post("/sendEmail", async (req, res) => {
   try {
-    const { full_name, email, phone, interest, comment } = req.body;
+    const { full_name, email, phone, interest, comment, user_type } = req.body;
     // const html_path = path.join(__dirname, "html", "info.html");
     const html_body = email_content({
       full_name,
@@ -33,6 +33,7 @@ app.post("/sendEmail", async (req, res) => {
       phone,
       interest,
       comment,
+      user_type,
     });
     await sendEmail({
       subject: "New Lead from Alaro City Landing Page",

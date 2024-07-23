@@ -1,4 +1,11 @@
-const email_content = ({ full_name, email, phone, interest, comment }) => {
+const email_content = ({
+  full_name,
+  email,
+  phone,
+  interest,
+  comment,
+  user_type,
+}) => {
   return `<!doctype html>
   <html lang="en">
       <head>
@@ -70,6 +77,10 @@ const email_content = ({ full_name, email, phone, interest, comment }) => {
               <div class="info-item">
                   <span class="label">Phone Number:</span>
                   <span class="value">${phone}</span>
+              </div>
+              <div class="info-item">
+                  <span class="label">Investor or Broker:</span>
+                  <span class="value">${user_type}</span>
               </div>
 
               <h2>Interest</h2>

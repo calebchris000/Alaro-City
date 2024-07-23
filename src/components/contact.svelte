@@ -14,6 +14,7 @@
             phone: string;
             interest: string;
             comment: string;
+            user_type: string;
         };
 
         if (!form_data.full_name) {
@@ -40,7 +41,8 @@
             return;
         }
 
-        const { full_name, phone, email, interest, comment } = form_data;
+        const { full_name, phone, email, interest, comment, user_type } =
+            form_data;
 
         console.log(form_data);
 
@@ -51,6 +53,7 @@
                 email,
                 interest,
                 comment,
+                user_type,
             })
             .then((response) => {
                 const { status, data } = response;
@@ -107,6 +110,14 @@
                 <option value="Residential">Residential</option>
                 <option value="Commercial">Commercial</option>
                 <option value="Industrial Plot">Industrial Plot</option>
+            </select>
+        </div>
+        <div class="form_item">
+            <label for="user_type">Are You An Investor or a Broker?</label>
+            <select name="user_type" id="">
+                <option value="">Select Your Type</option>
+                <option value="Investor">Investor</option>
+                <option value="Broker">Broker</option>
             </select>
         </div>
         <div class="form_item">
