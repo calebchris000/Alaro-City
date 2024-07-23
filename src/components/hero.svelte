@@ -63,7 +63,9 @@
             }}
             class="absolute inset-0 blur"
         ></div>
-        <div class="w-[60vw] overflow-hidden h-fit bg-white rounded-lg z-50">
+        <div
+            class="w-full lg:w-[60vw] overflow-hidden h-fit bg-white lg:rounded-lg z-50"
+        >
             <video
                 bind:this={video_element}
                 controls
@@ -72,6 +74,24 @@
             ></video>
         </div>
     </div>
+
+    <button
+        type="button"
+        on:click={() => {
+            show_video_popup = true;
+        }}
+        class="lg:hidden video_holder flex flex-col items-center w-full gap-4 mt-20"
+    >
+        <p class="text-4xl text-primary select-none font-semibold underline">
+            Watch Video
+        </p>
+        <span class="w-full block bg-gray-200 relative">
+            <img class="w-full" src={video_shot} alt="" />
+            <Play
+                className="w-24 text-white shadow-md absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]"
+            />
+        </span>
+    </button>
 </section>
 
 <style>
