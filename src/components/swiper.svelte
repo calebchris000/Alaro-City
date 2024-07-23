@@ -30,7 +30,7 @@
     const images = [one, two, three, four, five, six, seven];
 </script>
 
-<div class="swiper w-full">
+<div class="swiper w-full h-fit">
     <div class="swiper-wrapper">
         {#each images as image}
             <div class="swiper-slide overflow-hidden">
