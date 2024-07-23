@@ -5,7 +5,7 @@
     class="h-fit bg-white p-4 lg:p-32 shapedividers_com-2274 pt-32 flex flex-col gap-10"
 >
     <h2 class="text-2xl font-semibold text-secondary underline text-center">
-        About Us
+        About Alaro City
     </h2>
     <div class="lg:w-[50%] gap-4 text-center mx-auto space-y-4">
         <p class="leading-loose content">
