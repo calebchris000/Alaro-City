@@ -1,4 +1,41 @@
 <script lang="ts">
+    import { Notification } from "../core/utils/notification";
+    const notification = new Notification();
+    let form_element: HTMLFormElement;
+
+    function handleForm() {
+        if (!form_element) return;
+
+        const formData = new FormData(form_element);
+        const form_data = Object.fromEntries(formData) as {
+            email: string;
+            full_name: string;
+            phone: string;
+            interest: string;
+            comment: string;
+        };
+
+        if (!form_data.full_name) {
+            notification.error({ text: "Fill out your names" });
+            return;
+        }
+        if (form_data.full_name.split(" ").length < 2) {
+            notification.error({ text: "Provide your first and last name" });
+            return;
+        }
+
+        if (!form_data.email) {
+            notification.error({ text: "Provide an email address" });
+            return;
+        }
+
+        if (!form_data.interest) {
+            notification.error({ text: "Select your interst in the dropdown" });
+            return;
+        }
+
+        console.log(form_data);
+    }
 </script>
 
 <section
@@ -7,7 +44,7 @@
 >
     <h1 class="text-2xl font-semibold text-secondary underline">Message Us</h1>
 
-    <form class="form" action="post">
+    <form bind:this={form_element} class="form">
         <div class="form_item">
             <label for="full_name">Full Name</label>
             <input
@@ -27,7 +64,7 @@
         <div class="form_item">
             <label for="email">Email Address</label>
             <input
-                type="text"
+                type="email"
                 name="email"
                 placeholder="Enter your email address"
             />
@@ -35,6 +72,7 @@
         <div class="form_item">
             <label for="interest">What Are You Interested In?</label>
             <select name="interest" id="">
+                <option value="">Select Your Interest</option>
                 <option value="Apartment">Apartment</option>
                 <option value="Residential">Residential</option>
                 <option value="Commercial">Commercial</option>
@@ -47,8 +85,9 @@
         </div>
 
         <button
+            on:click={handleForm}
             class="bg-secondary text-primary p-2 font-semibold px-10 w-fit mx-auto"
-            type="submit">Submit</button
+            type="button">Submit</button
         >
     </form>
 </section>

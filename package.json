@@ -22,6 +22,8 @@
     "vite": "^5.3.4"
   },
   "dependencies": {
+    "nodemailer": "^6.9.14",
+    "simple-notify": "^1.0.4",
     "swiper": "^11.1.5"
   }
 }

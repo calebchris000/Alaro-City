@@ -6,7 +6,6 @@
     window.addEventListener("scroll", () => {
         if (!nav) return;
         if (window.scrollY > 0) {
-            console.log("off");
             nav.style.boxShadow = "0 5px 20px rgba(63,156,61, 0.6)";
         } else {
             nav.style.boxShadow = "none";
