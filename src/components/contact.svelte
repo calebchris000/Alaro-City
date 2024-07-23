@@ -15,6 +15,7 @@
             interest: string;
             comment: string;
             user_type: string;
+            site_visit: string;
         };
 
         if (!form_data.full_name) {
@@ -41,8 +42,20 @@
             return;
         }
 
-        const { full_name, phone, email, interest, comment, user_type } =
-            form_data;
+        if (!form_data.user_type) {
+            notification.error({ text: "Select your user type" });
+            return;
+        }
+
+        const {
+            full_name,
+            phone,
+            email,
+            interest,
+            comment,
+            user_type,
+            site_visit,
+        } = form_data;
 
         console.log(form_data);
 
@@ -54,6 +67,7 @@
                 interest,
                 comment,
                 user_type,
+                site_visit,
             })
             .then((response) => {
                 const { status, data } = response;
@@ -119,6 +133,12 @@
                 <option value="Investor">Investor</option>
                 <option value="Broker">Broker</option>
             </select>
+        </div>
+        <div class="form_item">
+            <label for="site_visit"
+                >When You Would Like To Go For Site Visit.</label
+            >
+            <input name="site_visit" type="date" />
         </div>
         <div class="form_item">
             <label for="comment">Comment</label>

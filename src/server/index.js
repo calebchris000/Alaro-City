@@ -4,6 +4,7 @@ const cors = require("cors");
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
+const moment = require("moment");
 const { email_content } = require("./html/email");
 const { sendEmail } = require("./service/email_service");
 const app = express();
@@ -25,8 +26,17 @@ app.get("/", (req, res) => {
 
 app.post("/sendEmail", async (req, res) => {
   try {
-    const { full_name, email, phone, interest, comment, user_type } = req.body;
+    const {
+      full_name,
+      email,
+      phone,
+      interest,
+      comment,
+      user_type,
+      site_visit,
+    } = req.body;
     // const html_path = path.join(__dirname, "html", "info.html");
+    const date = moment(site_visit).format("dddd, Do [of] MMMM, YYYY.");
     const html_body = email_content({
       full_name,
       email,
@@ -34,6 +44,7 @@ app.post("/sendEmail", async (req, res) => {
       interest,
       comment,
       user_type,
+      site_visit: date,
     });
     await sendEmail({
       subject: "New Lead from Alaro City Landing Page",
