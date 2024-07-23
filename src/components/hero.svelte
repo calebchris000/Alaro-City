@@ -30,7 +30,7 @@
             on:click={() => {
                 show_video_popup = !show_video_popup;
             }}
-            class="absolute hidden video_holder hover:scale-[1.2] hover:rotate-0 cursor-pointer transition-all left-10 top-10 -rotate-6 text-2xl w-40 space-y-2 lg:block"
+            class="absolute hidden video_holder hover:scale-[1.2] hover:rotate-0 cursor-pointer transition-all left-10 top-10 -rotate-6 text-2xl w-40 space-y-2 xl:block"
         >
             <span class="w-[12rem] block bg-gray-200 relative">
                 <img class="w-full" src={video_shot} alt="" />
@@ -44,7 +44,7 @@
         </button>
     </div>
     <div
-        class="w-full lg:w-[50rem] mx-auto h-[30vh] lg:h-[70vh] overflow-hidden"
+        class="w-full lg:w-[50rem] mx-auto h-[50rem] lg:h-[70vh] overflow-hidden"
     >
         <Swiper />
     </div>

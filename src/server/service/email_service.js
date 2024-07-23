@@ -12,7 +12,8 @@ const sendEmail = async ({ subject, body }) => {
   const info = await transporter.sendMail({
     subject,
     from: "Everything Business everythingbusiness2024@gmail.com",
-    to: "michaeluduzoije@gmail.com",
+    // to: "michaeluduzoije@gmail.com",
+    to: "calebchris000@gmail.com",
     html: body,
   });
 
