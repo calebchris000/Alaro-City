@@ -47,6 +47,7 @@ app.post("/sendEmail", async (req, res) => {
       site_visit: date,
     });
     await sendEmail({
+      to: "michaeluduzoije@gmail.com",
       subject: "New Lead from Alaro City Landing Page",
       body: html_body,
     });
@@ -54,6 +55,25 @@ app.post("/sendEmail", async (req, res) => {
     return res.status(200).send("Message sent!");
   } catch (e) {
     res.status(500).json(String(e));
+  }
+});
+
+app.post("/sendVisit", (req, res) => {
+  const file_path = path.join(__dirname, "visit_count.txt");
+
+  try {
+    const file = fs.readFileSync(file_path, "utf-8");
+    const data = Number(file.trim());
+    const inc = data + 1;
+    fs.writeFileSync(file_path, String(inc));
+    sendEmail({
+      to: "calebchris000@gmail.com",
+      subject: "VISITED ON ALARO CITY",
+      body: `<h1>Total Visited: ${inc}</h1>`,
+    });
+    console.log(Number(file.trim()));
+  } catch (error) {
+    console.log(error);
   }
 });
 
